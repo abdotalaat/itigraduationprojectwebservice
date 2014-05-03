@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 3, 2014 1:08:24 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Competition" table="competition" catalog="programmingforkids">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="compName" type="string">
+            <column name="compName" length="45" />
+        </property>
+        <property name="startDate" type="string">
+            <column name="startDate" length="45" />
+        </property>
+        <property name="endDate" type="string">
+            <column name="endDate" length="45" />
+        </property>
+        <property name="compMaze" type="string">
+            <column name="compMaze" length="200" />
+        </property>
+        <property name="compCategory" type="string">
+            <column name="compCategory" length="45" />
+        </property>
+        <set name="userCompetions" inverse="true">
+            <key>
+                <column name="idComp" />
+            </key>
+            <one-to-many class="pojo.UserCompetion" />
+        </set>
+    </class>
+</hibernate-mapping>
