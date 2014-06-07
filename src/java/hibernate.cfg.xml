@@ -7,8 +7,8 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/programmingforkids?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">root</property>
-    <mapping resource="pojo/User.hbm.xml"/>
-    <mapping resource="pojo/Competition.hbm.xml"/>
     <mapping resource="pojo/UserCompetion.hbm.xml"/>
+    <mapping resource="pojo/Competition.hbm.xml"/>
+    <mapping resource="pojo/User.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

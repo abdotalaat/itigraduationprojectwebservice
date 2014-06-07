@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated May 3, 2014 1:08:24 PM by Hibernate Tools 3.2.1.GA -->
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 7, 2014 10:51:16 PM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="pojo.Competition" table="competition" catalog="programmingforkids">
         <id name="id" type="java.lang.Integer">
@@ -23,7 +23,10 @@
         <property name="compCategory" type="string">
             <column name="compCategory" length="45" />
         </property>
-        <set name="userCompetions" inverse="true">
+        <property name="description" type="string">
+            <column name="description" length="45" />
+        </property>
+        <set name="userCompetions" table="user_competion" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="idComp" />
             </key>

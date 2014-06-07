@@ -1,5 +1,5 @@
 package pojo;
-// Generated May 3, 2014 1:08:24 PM by Hibernate Tools 3.2.1.GA
+// Generated Jun 7, 2014 10:51:16 PM by Hibernate Tools 3.6.0
 
 
 import java.util.HashSet;
@@ -21,19 +21,12 @@ public class User  implements java.io.Serializable {
     public User() {
     }
 
-    public User(String fname, String lname, String username, String dateofbirth, Set userCompetions) {
+    public User(String fname, String lname, String username, String dateofbirth) {
        this.fname = fname;
        this.lname = lname;
        this.username = username;
        this.dateofbirth = dateofbirth;
        this.userCompetions = userCompetions;
-    }
-     public User(String fname, String lname, String username, String dateofbirth) {
-       this.fname = fname;
-       this.lname = lname;
-       this.username = username;
-       this.dateofbirth = dateofbirth;
-     
     }
    
     public Integer getIdUser() {

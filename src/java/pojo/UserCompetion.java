@@ -1,5 +1,5 @@
 package pojo;
-// Generated May 3, 2014 1:08:24 PM by Hibernate Tools 3.2.1.GA
+// Generated Jun 7, 2014 10:51:16 PM by Hibernate Tools 3.6.0
 
 
 
@@ -10,17 +10,17 @@ public class UserCompetion  implements java.io.Serializable {
 
 
      private Integer iduserCompetion;
-     private Competition competition;
      private User user;
+     private Competition competition;
      private String solveTime;
-     private String compScore;
+     private Integer compScore;
 
     public UserCompetion() {
     }
 
-    public UserCompetion(Competition competition, User user, String solveTime, String compScore) {
-       this.competition = competition;
+    public UserCompetion(User user, Competition competition, String solveTime, Integer compScore) {
        this.user = user;
+       this.competition = competition;
        this.solveTime = solveTime;
        this.compScore = compScore;
     }
@@ -32,19 +32,19 @@ public class UserCompetion  implements java.io.Serializable {
     public void setIduserCompetion(Integer iduserCompetion) {
         this.iduserCompetion = iduserCompetion;
     }
-    public Competition getCompetition() {
-        return this.competition;
-    }
-    
-    public void setCompetition(Competition competition) {
-        this.competition = competition;
-    }
     public User getUser() {
         return this.user;
     }
     
     public void setUser(User user) {
         this.user = user;
+    }
+    public Competition getCompetition() {
+        return this.competition;
+    }
+    
+    public void setCompetition(Competition competition) {
+        this.competition = competition;
     }
     public String getSolveTime() {
         return this.solveTime;
@@ -53,11 +53,11 @@ public class UserCompetion  implements java.io.Serializable {
     public void setSolveTime(String solveTime) {
         this.solveTime = solveTime;
     }
-    public String getCompScore() {
+    public Integer getCompScore() {
         return this.compScore;
     }
     
-    public void setCompScore(String compScore) {
+    public void setCompScore(Integer compScore) {
         this.compScore = compScore;
     }
 
